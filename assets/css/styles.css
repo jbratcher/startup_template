@@ -10,6 +10,7 @@
 html {
     font: normal 16px sans-serif;
     color: #555;
+    scroll-behavior: smooth;
 }
 
 section {
