@@ -278,10 +278,12 @@ header nav li {
 }
 
 @media (max-width: 40rem) {
+    
     .packages .grid li {
         flex-basis: 100%;
         padding: 1.25rem;
     }
+    
 }
 
 /* Testimonials */
@@ -298,13 +300,16 @@ header nav li {
 }
 
 @media (max-width: 40rem) {
+    
     .testimonials .quote {
         font-size: 1.125rem;
         margin: 1rem 0;
     }
+    
     .testimonials .author {
         font-size: 0.875rem;
     }
+    
 }
 
 /* Contact Section */
@@ -331,10 +336,12 @@ header nav li {
 }
 
 @media (max-width: 62.5rem) {
+    
     .contact form input {
         flex-basis: 100%;
         margin: 0 0 1.25rem 0;
     }
+    
 }
 
 /* Footer Section */
@@ -376,15 +383,19 @@ footer i.fa:hover {
     }
 
 @media (max-width: 68.75rem) {
+    
     footer {
         flex-direction: column;
     }
+    
     footer p {
         text-align: center;
         margin-bottom: 1.25rem;
     }
+    
     footer ul li {
         margin: 0 0.5rem;
     }
+    
 }
 
