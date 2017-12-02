@@ -248,15 +248,15 @@ header nav li {
 }
 
 @media (max-width: 68.75rem) {
-    .destinations .grid li.small,
-    .destinations .grid li.large {
+    #destinations .grid li.small,
+    #destinations .grid li.large {
         flex-basis: 50%;
     }
 }
 
 @media (max-width: 40rem) {
-    .destinations .grid li.small,
-    .destinations .grid li.large {
+    #destinations .grid li.small,
+    #destinations .grid li.large {
         flex-basis: 100%;
     }
 }
@@ -280,11 +280,10 @@ header nav li {
 
 @media (max-width: 40rem) {
     
-    .packages .grid li {
+    #packages .grid li {
         flex-basis: 100%;
-        padding: 1.25rem;
+        padding: 0.5rem;
     }
-    
 }
 
 /* Testimonials */
@@ -302,12 +301,12 @@ header nav li {
 
 @media (max-width: 40rem) {
     
-    .testimonials .quote {
+    #testimonials .quote {
         font-size: 1.125rem;
         margin: 1rem 0;
     }
     
-    .testimonials .author {
+    #testimonials .author {
         font-size: 0.875rem;
     }
     
@@ -338,7 +337,7 @@ header nav li {
 
 @media (max-width: 62.5rem) {
     
-    .contact form input {
+    #contact form input {
         flex-basis: 100%;
         margin: 0 0 1.25rem 0;
     }
@@ -380,8 +379,22 @@ footer i.fa {
     
 footer i.fa:hover {
         color: #01fa01;
-        transform: scale(1.5);
+        transform: scale(1.3);
     }
+    
+footer ul li .fa-long-arrow-up {
+    padding-top: 1rem;
+}
+
+footer a {
+    opacity: 0.75;
+    transition: all 0.3s ease-out;
+}
+
+footer a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
 
 @media (max-width: 68.75rem) {
     
