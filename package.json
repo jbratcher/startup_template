@@ -1,7 +1,7 @@
 {
   "name": "Startup",
   "version": "1.0.1",
-  "description": "One Page for a Startup",
+  "description": "Single Page Template for a startup company",
   "main": "main.js",
   "scripts": {
     "start": "gulp"
