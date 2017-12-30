@@ -80,7 +80,7 @@ nav li:hover {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  background-color: forestgreen;
+  background: linear-gradient(to bottom, green 70%, forestgreen 100%);
   opacity: 1; }
 
 .btn:hover {
@@ -155,7 +155,7 @@ header nav li {
 
 .hero-content {
   opacity: 0;
-  margin-top: 6.25rem;
+  margin-top: 4rem;
   animation: 1s slidefade 1s forwards; }
 
 @keyframes slidefade {
