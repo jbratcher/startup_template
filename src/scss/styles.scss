@@ -1,6 +1,7 @@
 // Variables
 
 $font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+$text-shadow:  0 0 0.25em rgba(0, 0, 0, 1);
 
 // Global Styles
 
@@ -73,48 +74,26 @@ a {
     justify-content: center;
 }
 
-/* Custom Styles */
-
-/* Main Nav */
-
-nav {
-    list-style: none;
-    
-    a {
-        opacity: 0.75;
-        transition: all 0.3s ease-out;
-    }
-    
-    a:hover {
-        opacity: 1;
-    }
-    
-    li {
-        transition: all 0.3s ease-out;
-    }
-    
-    li:hover {
-        transform: scale(1.3);
-    }
-    
-}
+// Custom Styles 
 
 .btn {
+    position: relative;
+    top: 0;
     border: 0.125em solid darkgreen;
     border-radius: 1em;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     background: linear-gradient(to bottom, #228b22 50%, #31ca31 100%);
-    opacity: 1;
+    transition: all 0.5s ease-in-out;
 }
 
 .btn:hover {
-    opacity: 0.75;
+    top: -0.25em;
 }
 
 
-/* Main Header */
+// Main Header
 
 header {
     position: absolute;
@@ -131,6 +110,7 @@ header {
     h2 {
         font-family: "Quicksand", sans-serif;
         font-size: 1em;
+        text-shadow: $text-shadow;
         transition: all 0.3s ease-out;
     }
     
@@ -141,19 +121,27 @@ header {
     nav {
         display: flex;
         margin-right: -1em;
-        
-        li {
-            margin: 0 1em;
-        }
+        list-style: none;
         
         a {
             font-size: 0.75em;
+            text-shadow: $text-shadow;
         }
+        
+        li {
+            margin: 0 1em;
+            transition: all 0.3s ease-out;
+        }
+        
+        li:hover {
+            transform: scale(1.3);
+        }
+        
     }
     
 }
 
-/* Hero Styles */
+// Hero Styles
 
 .hero {
     position: relative;
@@ -175,16 +163,18 @@ header {
     
     h1 {
         font: bold 2.5em "Open Sans", sans-serif;
+        text-shadow: $text-shadow;
         margin: 1em 0;
     }
     
     h3 {
         font: normal 1.25em "Open Sans", sans-serif;
+        text-shadow: $text-shadow;
         margin-bottom: 2.5em;
     }
     
     a.btn {
-        padding: 1.25em 2.875em;
+        padding: 1em 2em;
     }
     
 }
@@ -195,7 +185,7 @@ header {
     animation: 1s slidefade 1s forwards;
 }
 
-/* Destinations Section */
+// Destinations Section
 
 #destinations .grid {
 
@@ -205,6 +195,12 @@ header {
         background-clip: content-box;
         background-size: cover;
         background-position: center;
+        opacity: 0.875;
+        transition: all 0.5s ease-in-out ;
+    }
+    
+    li:hover {
+        opacity: 1;
     }
     
     li.small {
@@ -219,11 +215,12 @@ header {
         display: block;
         width: 100%;
         height: 100%;
+        
     }
     
 }
 
-/* Packages Section*/
+// Packages Section
 
 #packages .grid {
 
@@ -244,7 +241,7 @@ header {
     
 }
 
-/* Testimonials */
+// Testimonials
 
 #testimonials {
     .quote {
@@ -260,7 +257,7 @@ header {
     
 }
 
-/* Contact Section */
+// Contact Section
 
 #contact form {
     display: flex;
@@ -284,7 +281,7 @@ header {
     
 }
 
-/* Footer Section */
+// Footer Section
 
 footer {
     display: flex;
@@ -316,14 +313,15 @@ footer {
     }
     
     i.fa-angle-up {
+        position: relative;
+        top: 0.125em;
         display: inline-block;
-        vertical-align: middle;
         -webkit-transform: perspective(0.0625em) translateZ(0);
         transform: perspective(0.0625em) translateZ(0);
         box-shadow: 0 0 0.0625em transparent;
         color: #fff;
         animation:  3s ease-in-out 0.5s infinite forwards alternate bounceup;
-        transition: 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
     
     i.fa-angle-up:hover, footer i.fa-angle-up:active, footer i.fa-angle-up:focus {
@@ -345,6 +343,7 @@ footer {
 // Media Queries
 
 @media (max-width: 40rem) {
+    
     #destinations .grid li.small,
     #destinations .grid li.large {
         flex-basis: 100%;
@@ -366,13 +365,12 @@ footer {
     
 }
 
-@media (max-width: 50rem) {
+@media (max-width: 50em) {
+    
     section {
         padding: 3.125em 1.25em;
     }
-}
-
-@media (max-width: 50em) {
+    
     header {
         padding: 1.25em 3.125em;
         flex-direction: column;
@@ -412,6 +410,7 @@ footer {
 }
 
 @media (max-width: 68.75rem) {
+    
     #destinations .grid li.small,
     #destinations .grid li.large {
         flex-basis: 50%;
@@ -429,48 +428,50 @@ footer {
     footer ul li {
         margin: 0 0.5em;
     }
+    
+    i.fa-angle-up {
+        margin-top: 0.25em;
+    }
 }
-
-
-
 
 // Animations
 
 @keyframes fadein {
+    
     100% {
         opacity: 1;
     }
 }
 
 @keyframes slidefade {
+    
     100% {
         opacity: 1;
         margin-top: 0;
     }
 }
 
-
-
 @keyframes bounceup {
     
     0% {
-        -webkit-transform: translateY(-0.1em);
-        transform: translateY(-0.1em);
+        -webkit-transform: translateY(-0.125em);
+        transform: translateY(-0.125em);
     }
     25% {
-        -webkit-transform: translateY(-0.5em);
-        transform: translateY(-0.5em);
-    }
-    50% {
         -webkit-transform: translateY(-0.25em);
         transform: translateY(-0.25em);
     }
+    50% {
+        -webkit-transform: translateY(-0.125em);
+        transform: translateY(-0.125em);
+    }
     75% {
-        -webkit-transform: translateY(-0.5em);
-        transform: translateY(-0.5em);
+        -webkit-transform: translateY(-0.25em);
+        transform: translateY(-0.25em);
     }
     100% {
-        -webkit-transform: translateY(-0.1em);
-        transform: translateY(-0.1em);
+        -webkit-transform: translateY(-0.125em);
+        transform: translateY(-0.125em);
     }
 }
+
