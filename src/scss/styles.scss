@@ -2,6 +2,7 @@
 
 $font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 $text-shadow:  0 0 0.25em rgba(0, 0, 0, 1);
+$primary-color: #2caa5e;
 
 // Global Styles
 
@@ -109,7 +110,7 @@ header {
     
     h2 {
         font-family: "Quicksand", sans-serif;
-        font-size: 1em;
+        font-size: 1.25em;
         text-shadow: $text-shadow;
         transition: all 0.3s ease-out;
     }
@@ -124,7 +125,7 @@ header {
         list-style: none;
         
         a {
-            font-size: 0.75em;
+            font-size: 1em;
             text-shadow: $text-shadow;
         }
         
@@ -222,24 +223,43 @@ header {
 
 // Packages Section
 
-#packages .grid {
-
-    li {
-        padding: 3.125em;
-        flex-basis: 50%;
-        text-align: center;
-        
-        i {
-            color: #2caa5e;
-        }
+#packages {
+    
+    .title {
+        transition: all 0.3s ease-in-out;
     }
     
-    h4 {
-        font-size: 1.875em;
-        margin: 1.5625em 0;
+    .title:hover {
+        color: $primary-color;
+    }
+    
+    .grid {
+
+        li {
+            padding: 3.125em;
+            flex-basis: 50%;
+            text-align: center;
+            
+            i {
+                color: $primary-color;
+            }
+        }
+        
+        h4 {
+            color: #333;
+            font-size: 1.875em;
+            margin: 1.5625em 0;
+        }
+        
+        p {
+            color: #333;
+        }
+        
     }
     
 }
+
+
 
 // Testimonials
 
@@ -277,6 +297,7 @@ header {
         font-size: 1.125em;
         color: #555;
         flex: 1;
+        border-radius: 2rem;
     }
     
 }
@@ -373,10 +394,10 @@ footer {
     
     header {
         padding: 1.25em 3.125em;
-        flex-direction: column;
+        flex-flow: column wrap;
         
         h2 {
-            margin-bottom: 1em;
+            display: none;
         }
         
     }

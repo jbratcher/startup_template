@@ -79,7 +79,7 @@ header {
   z-index: 1; }
   header h2 {
     font-family: "Quicksand", sans-serif;
-    font-size: 1em;
+    font-size: 1.25em;
     text-shadow: 0 0 0.25em black;
     transition: all 0.3s ease-out; }
   header h2:hover {
@@ -89,7 +89,7 @@ header {
     margin-right: -1em;
     list-style: none; }
     header nav a {
-      font-size: 0.75em;
+      font-size: 1em;
       text-shadow: 0 0 0.25em black; }
     header nav li {
       margin: 0 1em;
@@ -151,6 +151,12 @@ header {
   width: 100%;
   height: 100%; }
 
+#packages .title {
+  transition: all 0.3s ease-in-out; }
+
+#packages .title:hover {
+  color: #2caa5e; }
+
 #packages .grid li {
   padding: 3.125em;
   flex-basis: 50%;
@@ -159,8 +165,12 @@ header {
     color: #2caa5e; }
 
 #packages .grid h4 {
+  color: #333;
   font-size: 1.875em;
   margin: 1.5625em 0; }
+
+#packages .grid p {
+  color: #333; }
 
 #testimonials .quote {
   font-size: 1.375em;
@@ -185,7 +195,8 @@ header {
     margin-right: 2em;
     font-size: 1.125em;
     color: #555;
-    flex: 1; }
+    flex: 1;
+    border-radius: 2rem; }
 
 footer {
   display: flex;
@@ -243,9 +254,9 @@ footer {
     padding: 3.125em 1.25em; }
   header {
     padding: 1.25em 3.125em;
-    flex-direction: column; }
+    flex-flow: column wrap; }
     header h2 {
-      margin-bottom: 1em; }
+      display: none; }
   .hero {
     min-height: 37.5rem; }
     .hero h1 {
