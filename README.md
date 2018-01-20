@@ -21,10 +21,11 @@ This is a experimental project using only HTML and CSS to create a modern web ap
 
 v1.0.1
 
-* Added CSS variables
+* Added SASS variables
 * Reduced brightness on buttons
-* Responsive image section
+* Changed destinations sections grid images to column at mobile width
+* Refactored some CSS
 
 v1.0.0
 
-* Initial Commite
+* Initial Commit

@@ -265,6 +265,7 @@ header {
 // Testimonials
 
 #testimonials {
+    
     .quote {
         font-size: 1.375em;
         font-weight: 300;
@@ -368,11 +369,11 @@ footer {
     
     #destinations .grid {
         flex-direction: column;
-    }
+        
+        li.small, li.large {
+            flex-basis: 100%;
+        }
     
-    #destinations .grid li.small,
-    #destinations .grid li.large {
-        flex-basis: 100%;
     }
     
     #packages .grid li {
@@ -380,13 +381,17 @@ footer {
         padding: 0.5em;
     }
     
-    #testimonials .quote {
-        font-size: 1.125em;
-        margin: 1em 0;
-    }
+    #testimonials {
+        
+        .quote {
+            font-size: 1.125em;
+            margin: 1em 0;
+        }
+        
+        .author {
+            font-size: 0.875em;
+        }
     
-    #testimonials .author {
-        font-size: 0.875em;
     }
     
 }
