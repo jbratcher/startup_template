@@ -10,7 +10,8 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); }
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  overflow-x: hiiden; }
 
 section {
   display: flex;
@@ -239,9 +240,8 @@ footer {
 @media (max-width: 40rem) {
   #destinations .grid {
     flex-direction: column; }
-  #destinations .grid li.small,
-  #destinations .grid li.large {
-    flex-basis: 100%; }
+    #destinations .grid li.small, #destinations .grid li.large {
+      flex-basis: 100%; }
   #packages .grid li {
     flex-basis: 100%;
     padding: 0.5em; }
