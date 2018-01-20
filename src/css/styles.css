@@ -60,7 +60,7 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  background: linear-gradient(to bottom, #228b22 50%, #31ca31 100%);
+  background: linear-gradient(to bottom, #228b22 50%, #2aab2a 100%);
   transition: all 0.5s ease-in-out; }
 
 .btn:hover {
@@ -237,6 +237,8 @@ footer {
     transform: scale(1.1); }
 
 @media (max-width: 40rem) {
+  #destinations .grid {
+    flex-direction: column; }
   #destinations .grid li.small,
   #destinations .grid li.large {
     flex-basis: 100%; }
