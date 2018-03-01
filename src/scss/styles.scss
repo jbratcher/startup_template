@@ -1,7 +1,7 @@
 // Variables
 
 $font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-$text-shadow:  0 0 0.25em rgba(0, 0, 0, 1);
+$text-shadow:  0 0 0.25rem rgba(0, 0, 0, 1);
 $primary-color: #2caa5e;
 $button-bg: linear-gradient(to bottom, #228b22 50%, #2aab2a 100%);
 
@@ -15,34 +15,34 @@ $button-bg: linear-gradient(to bottom, #228b22 50%, #2aab2a 100%);
 }
 
 html {
-    font: normal 1em sans-serif;
+    font: normal 1rem sans-serif;
     color: #333;
     scroll-behavior: smooth;
 }
 
 body {
     font-size: $font-size;
-    overflow-x: hiiden;
+    overflow-x: hidden;
 }
 
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 6em 4em;
+    padding: 6rem 4rem;
     
     .title {
         text-transform: capitalize;
-        font: bold 2em "Open Sans", sans-serif;
-        margin-bottom: 1.875em;
+        font: bold 2rem "Open Sans", sans-serif;
+        margin-bottom: 1.875rem;
         text-align: center;
     }
     
     p {
-        max-width: 48.4375em;
+        max-width: 48.4375rem;
         line-height: 2;
-        padding: 0 1.25em;
-        margin-bottom: 1.875em;
+        padding: 0 1.25rem;
+        margin-bottom: 1.875rem;
         text-align: center;
     }
     
@@ -57,11 +57,11 @@ ul {
 }
 
 hr {
-    width: 15.625em;
-    height: 0.1875em;
+    width: 15.625rem;
+    height: 0.1875rem;
     background-color: forestgreen;
     border: 0;
-    margin-bottom: 3.125em;
+    margin-bottom: 3.125rem;
 }
 
 a {
@@ -82,8 +82,8 @@ a {
 .btn {
     position: relative;
     top: 0;
-    border: 0.125em solid darkgreen;
-    border-radius: 1em;
+    border: 0.125rem solid darkgreen;
+    border-radius: 1rem;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -92,7 +92,7 @@ a {
 }
 
 .btn:hover {
-    top: -0.25em;
+    top: -0.25rem;
 }
 
 
@@ -104,7 +104,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2em 6em 0;
+    padding: 2rem 6rem 0;
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
     color: #fff;
@@ -112,7 +112,7 @@ header {
     
     h2 {
         font-family: "Quicksand", sans-serif;
-        font-size: 1.25em;
+        font-size: 1.25rem;
         text-shadow: $text-shadow;
         transition: all 0.3s ease-out;
     }
@@ -123,16 +123,16 @@ header {
     
     nav {
         display: flex;
-        margin-right: -1em;
+        margin-right: -1rem;
         list-style: none;
         
         a {
-            font-size: 1em;
+            font-size: 1rem;
             text-shadow: $text-shadow;
         }
         
         li {
-            margin: 0 1em;
+            margin: 0 1rem;
             transition: all 0.3s ease-out;
         }
         
@@ -165,26 +165,26 @@ header {
     }
     
     h1 {
-        font: bold 2.5em "Open Sans", sans-serif;
+        font: bold 2.5rem "Open Sans", sans-serif;
         text-shadow: $text-shadow;
-        margin: 1em 0;
+        margin: 1rem 0;
     }
     
     h3 {
-        font: normal 1.25em "Open Sans", sans-serif;
+        font: normal 1.25rem "Open Sans", sans-serif;
         text-shadow: $text-shadow;
-        margin-bottom: 2.5em;
+        margin-bottom: 2.5rem;
     }
     
     a.btn {
-        padding: 1em 2em;
+        padding: 1rem 2rem;
     }
     
 }
 
 .hero-content {
     opacity: 0;
-    margin-top: 4em;
+    margin-top: 4rem;
     animation: 1s slidefade 1s forwards;
 }
 
@@ -194,7 +194,7 @@ header {
 
     li {
         height: 21.875rem;
-        padding: 1.25em;
+        padding: 1.25rem;
         background-clip: content-box;
         background-size: cover;
         background-position: center;
@@ -238,7 +238,7 @@ header {
     .grid {
 
         li {
-            padding: 3.125em;
+            padding: 3.125rem;
             flex-basis: 50%;
             text-align: center;
             
@@ -249,8 +249,8 @@ header {
         
         h4 {
             color: #333;
-            font-size: 1.875em;
-            margin: 1.5625em 0;
+            font-size: 1.875rem;
+            margin: 1.5625rem 0;
         }
         
         p {
@@ -268,10 +268,10 @@ header {
 #testimonials {
     
     .quote {
-        font-size: 1.375em;
+        font-size: 1.375rem;
         font-weight: 300;
         line-height: 1.5;
-        margin: 2.5em 0 1.5625em;
+        margin: 2.5rem 0 1.5625rem;
     }
     
     .author {
@@ -290,14 +290,14 @@ header {
     width: 60%;
     
     .btn {
-        padding: 1.125em 2.625em;
-        margin: 1.125em 0;
+        padding: 1.125rem 2.625rem;
+        margin: 1.125rem 0;
     }
     
     input {
-        padding: 1em;
-        margin-right: 2em;
-        font-size: 1.125em;
+        padding: 1rem;
+        margin-right: 2rem;
+        font-size: 1.125rem;
         color: #555;
         flex: 1;
         border-radius: 2rem;
@@ -314,16 +314,16 @@ footer {
     background-color: #389638;
     color: #fff;
     font-weight: 600;
-    padding: 1.25em 0;
+    padding: 1.25rem 0;
     
     ul {
         display: flex;
         
         li {
-            margin-left: 1em;
+            margin-left: 1rem;
             
             .fa-long-arrow-up {
-                padding-top: 1em;
+                padding-top: 1rem;
             }
         } 
 
@@ -331,18 +331,18 @@ footer {
     
      p {
         text-transform: uppercase;
-        font-size: 0.875em;
+        font-size: 0.875rem;
         opacity: 0.6;
         align-self: center;
     }
     
     i.fa-angle-up {
         position: relative;
-        top: 0.125em;
+        top: 0.125rem;
         display: inline-block;
-        -webkit-transform: perspective(0.0625em) translateZ(0);
-        transform: perspective(0.0625em) translateZ(0);
-        box-shadow: 0 0 0.0625em transparent;
+        -webkit-transform: perspective(0.0625rem) translateZ(0);
+        transform: perspective(0.0625rem) translateZ(0);
+        box-shadow: 0 0 0.0625rem transparent;
         color: #fff;
         animation:  3s ease-in-out 0.5s infinite forwards alternate bounceup;
         transition: all 0.5s ease-in-out;
@@ -379,32 +379,32 @@ footer {
     
     #packages .grid li {
         flex-basis: 100%;
-        padding: 0.5em;
+        padding: 0.5rem;
     }
     
     #testimonials {
         
         .quote {
-            font-size: 1.125em;
-            margin: 1em 0;
+            font-size: 1.125rem;
+            margin: 1rem 0;
         }
         
         .author {
-            font-size: 0.875em;
+            font-size: 0.875rem;
         }
     
     }
     
 }
 
-@media (max-width: 50em) {
+@media (max-width: 50rem) {
     
     section {
-        padding: 3.125em 1.25em;
+        padding: 3.125rem 1.25rem;
     }
     
     header {
-        padding: 1.25em 3.125em;
+        padding: 1.25rem 3.125rem;
         flex-flow: column wrap;
         
         h2 {
@@ -417,15 +417,15 @@ footer {
         min-height: 37.5rem;
         
         h1 {
-            font-size: 3em;
+            font-size: 3rem;
         }
         
         h3 {
-            font-size: 1.5em;
+            font-size: 1.5rem;
         }
         
         a.btn {
-            padding: 1em 2.5em;
+            padding: 1rem 2.5rem;
         }
     
     }
@@ -436,7 +436,7 @@ footer {
     
     #contact form input {
         flex-basis: 100%;
-        margin: 0 0 1.25em 0;
+        margin: 0 0 1.25rem 0;
     }
     
 }
@@ -454,15 +454,15 @@ footer {
     
     footer p {
         text-align: center;
-        margin-bottom: 1.25em;
+        margin-bottom: 1.25rem;
     }
     
     footer ul li {
-        margin: 0 0.5em;
+        margin: 0 0.5rem;
     }
     
     i.fa-angle-up {
-        margin-top: 0.25em;
+        margin-top: 0.25rem;
     }
 }
 
@@ -486,24 +486,24 @@ footer {
 @keyframes bounceup {
     
     0% {
-        -webkit-transform: translateY(-0.125em);
-        transform: translateY(-0.125em);
+        -webkit-transform: translateY(-0.25rem);
+        transform: translateY(-0.25rem);
     }
     25% {
-        -webkit-transform: translateY(-0.25em);
-        transform: translateY(-0.25em);
+        -webkit-transform: translateY(-0.5rem);
+        transform: translateY(-0.5rem);
     }
     50% {
-        -webkit-transform: translateY(-0.125em);
-        transform: translateY(-0.125em);
+        -webkit-transform: translateY(-0.25rem);
+        transform: translateY(-0.25rem);
     }
     75% {
-        -webkit-transform: translateY(-0.25em);
-        transform: translateY(-0.25em);
+        -webkit-transform: translateY(-0.5rem);
+        transform: translateY(-0.5rem);
     }
     100% {
-        -webkit-transform: translateY(-0.125em);
-        transform: translateY(-0.125em);
+        -webkit-transform: translateY(-0.25rem);
+        transform: translateY(-0.25rem);
     }
 }
 
