@@ -61,11 +61,10 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  background: linear-gradient(to bottom, #228b22 50%, #2aab2a 100%);
+  background: radial-gradient(at bottom left, #228b22 50%, #2aab2a 100%);
   transition: all 0.5s ease-in-out; }
-
-.btn:hover {
-  top: -0.25rem; }
+  .btn:hover {
+    top: -0.25rem; }
 
 header {
   position: absolute;
@@ -83,8 +82,8 @@ header {
     font-size: 1.25rem;
     text-shadow: 0 0 0.25rem black;
     transition: all 0.3s ease-out; }
-  header h2:hover {
-    transform: scale(1.1); }
+    header h2:hover {
+      transform: scale(1.1); }
   header nav {
     display: flex;
     margin-right: -1rem;
@@ -95,8 +94,8 @@ header {
     header nav li {
       margin: 0 1rem;
       transition: all 0.3s ease-out; }
-    header nav li:hover {
-      transform: scale(1.3); }
+      header nav li:hover {
+        transform: scale(1.3); }
 
 .hero {
   position: relative;
@@ -137,15 +136,12 @@ header {
   background-position: center;
   opacity: 0.875;
   transition: all 0.5s ease-in-out; }
-
-#destinations .grid li:hover {
-  opacity: 1; }
-
-#destinations .grid li.small {
-  flex-basis: 30%; }
-
-#destinations .grid li.large {
-  flex-basis: 70%; }
+  #destinations .grid li:hover {
+    opacity: 1; }
+  #destinations .grid li.small {
+    flex-basis: 30%; }
+  #destinations .grid li.large {
+    flex-basis: 70%; }
 
 #destinations .grid a {
   display: block;
@@ -154,9 +150,8 @@ header {
 
 #packages .title {
   transition: all 0.3s ease-in-out; }
-
-#packages .title:hover {
-  color: #2caa5e; }
+  #packages .title:hover {
+    color: #2caa5e; }
 
 #packages .grid li {
   padding: 3.125rem;
@@ -222,20 +217,19 @@ footer {
     position: relative;
     top: 0.125rem;
     display: inline-block;
-    -webkit-transform: perspective(0.0625rem) translateZ(0);
     transform: perspective(0.0625rem) translateZ(0);
     box-shadow: 0 0 0.0625rem transparent;
     color: #fff;
     animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
     transition: all 0.5s ease-in-out; }
-  footer i.fa-angle-up:hover, footer footer i.fa-angle-up:active, footer footer i.fa-angle-up:focus {
-    transform: scale(1.1); }
+    footer i.fa-angle-up i.fa-angle-up:hover, footer i.fa-angle-up footer i.fa-angle-up:active, footer i.fa-angle-up footer i.fa-angle-up:focus {
+      transform: scale(1.1); }
   footer a {
     opacity: 0.75;
     transition: all 0.3s ease-out; }
-  footer a:hover {
-    opacity: 1;
-    transform: scale(1.1); }
+    footer a:hover {
+      opacity: 1;
+      transform: scale(1.1); }
 
 @media (max-width: 40rem) {
   #destinations .grid {
@@ -279,11 +273,11 @@ footer {
     flex-basis: 50%; }
   footer {
     flex-direction: column; }
-  footer p {
-    text-align: center;
-    margin-bottom: 1.25rem; }
-  footer ul li {
-    margin: 0 0.5rem; }
+    footer footer p {
+      text-align: center;
+      margin-bottom: 1.25rem; }
+    footer footer ul li {
+      margin: 0 0.5rem; }
   i.fa-angle-up {
     margin-top: 0.25rem; } }
 
@@ -298,17 +292,12 @@ footer {
 
 @keyframes bounceup {
   0% {
-    -webkit-transform: translateY(-0.25rem);
-    transform: translateY(-0.25rem); }
+    transform: translateY(-0.5rem); }
   25% {
-    -webkit-transform: translateY(-0.5rem);
-    transform: translateY(-0.5rem); }
+    transform: translateY(-1rem); }
   50% {
-    -webkit-transform: translateY(-0.25rem);
-    transform: translateY(-0.25rem); }
-  75% {
-    -webkit-transform: translateY(-0.5rem);
     transform: translateY(-0.5rem); }
+  75% {
+    transform: translateY(-1rem); }
   100% {
-    -webkit-transform: translateY(-0.25rem);
-    transform: translateY(-0.25rem); } }
+    transform: translateY(-0.5rem); } }
