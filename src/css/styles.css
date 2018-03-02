@@ -84,17 +84,17 @@ header {
     transition: all 0.3s ease-out; }
     header h2:hover {
       transform: scale(1.1); }
-  header nav {
+  header nav ul {
     display: flex;
     margin-right: -1rem;
     list-style: none; }
-    header nav a {
+    header nav ul a {
       font-size: 1rem;
       text-shadow: 0 0 0.25rem black; }
-    header nav li {
+    header nav ul li {
       margin: 0 1rem;
       transition: all 0.3s ease-out; }
-      header nav li:hover {
+      header nav ul li:hover {
         transform: scale(1.3); }
 
 .hero {
@@ -232,6 +232,10 @@ footer {
       transform: scale(1.1); }
 
 @media (max-width: 40rem) {
+  nav ul {
+    flex-direction: column; }
+    nav ul li {
+      padding: 0.5rem 0; }
   #destinations .grid {
     flex-direction: column; }
     #destinations .grid li.small, #destinations .grid li.large {

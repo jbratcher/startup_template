@@ -122,7 +122,7 @@ header {
         }
     }
     
-    nav {
+    nav ul {
         display: flex;
         margin-right: -1rem;
         list-style: none;
@@ -369,6 +369,15 @@ footer {
 // Media Queries
 
 @media (max-width: 40rem) {
+    
+    nav ul {
+        flex-direction: column;
+        
+        li {
+            padding: 0.5rem 0;
+        }
+        
+    }
     
     #destinations .grid {
         flex-direction: column;
