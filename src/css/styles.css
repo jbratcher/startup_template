@@ -4,13 +4,11 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-html {
-  font: normal 1rem sans-serif;
-  color: #333;
-  scroll-behavior: smooth; }
-
-body {
+html, body {
+  font: normal 1em sans-serif;
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  color: #333;
+  scroll-behavior: smooth;
   overflow-x: hidden; }
 
 section {
@@ -20,9 +18,12 @@ section {
   padding: 6rem 4rem; }
   section .title {
     text-transform: capitalize;
-    font: bold 2rem "Open Sans", sans-serif;
+    font: bold 2em "Open Sans", sans-serif;
+    text-align: center;
     margin-bottom: 1.875rem;
-    text-align: center; }
+    transition: all 0.3s ease-in-out; }
+    section .title:hover {
+      color: #2caa5e; }
   section p {
     max-width: 48.4375rem;
     line-height: 2;
@@ -79,7 +80,7 @@ header {
   z-index: 1; }
   header h2 {
     font-family: "Quicksand", sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     text-shadow: 0 0 0.25rem black;
     transition: all 0.3s ease-out; }
     header h2:hover {
@@ -89,7 +90,7 @@ header {
     margin-right: -1rem;
     list-style: none; }
     header nav ul a {
-      font-size: 1rem;
+      font-size: 1em;
       text-shadow: 0 0 0.25rem black; }
     header nav ul li {
       margin: 0 1rem;
@@ -113,11 +114,11 @@ header {
     z-index: -1;
     background-color: #80a3db; }
   .hero h1 {
-    font: bold 2.5rem "Open Sans", sans-serif;
+    font: bold 2.5em "Open Sans", sans-serif;
     text-shadow: 0 0 0.25rem black;
     margin: 1rem 0; }
   .hero h3 {
-    font: normal 1.25rem "Open Sans", sans-serif;
+    font: normal 1.25em "Open Sans", sans-serif;
     text-shadow: 0 0 0.25rem black;
     margin-bottom: 2.5rem; }
   .hero a.btn {
@@ -148,11 +149,6 @@ header {
   width: 100%;
   height: 100%; }
 
-#packages .title {
-  transition: all 0.3s ease-in-out; }
-  #packages .title:hover {
-    color: #2caa5e; }
-
 #packages .grid li {
   padding: 3.125rem;
   flex-basis: 50%;
@@ -162,14 +158,14 @@ header {
 
 #packages .grid h4 {
   color: #333;
-  font-size: 1.875rem;
+  font-size: 1.875em;
   margin: 1.5625rem 0; }
 
 #packages .grid p {
   color: #333; }
 
 #testimonials .quote {
-  font-size: 1.375rem;
+  font-size: 1.375em;
   font-weight: 300;
   line-height: 1.5;
   margin: 2.5rem 0 1.5625rem; }
@@ -189,7 +185,7 @@ header {
   #contact form input {
     padding: 1rem;
     margin-right: 2rem;
-    font-size: 1.125rem;
+    font-size: 1.125em;
     color: #555;
     flex: 1;
     border-radius: 2rem; }
@@ -210,7 +206,7 @@ footer {
         padding-top: 1rem; }
   footer p {
     text-transform: uppercase;
-    font-size: 0.875rem;
+    font-size: 0.875em;
     opacity: 0.6;
     align-self: center; }
   footer i.fa-angle-up {
@@ -244,10 +240,10 @@ footer {
     flex-basis: 100%;
     padding: 0.5rem; }
   #testimonials .quote {
-    font-size: 1.125rem;
+    font-size: 1.125em;
     margin: 1rem 0; }
   #testimonials .author {
-    font-size: 0.875rem; } }
+    font-size: 0.875em; } }
 
 @media (max-width: 50rem) {
   section {
@@ -260,9 +256,9 @@ footer {
   .hero {
     min-height: 37.5rem; }
     .hero h1 {
-      font-size: 3rem; }
+      font-size: 3em; }
     .hero h3 {
-      font-size: 1.5rem; }
+      font-size: 1.5em; }
     .hero a.btn {
       padding: 1rem 2.5rem; } }
 

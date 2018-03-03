@@ -14,14 +14,11 @@ $button-bg: radial-gradient(at bottom left, #228b22 50%, #2aab2a 100%);
     box-sizing: border-box;
 }
 
-html {
-    font: normal 1rem sans-serif;
+html, body {
+    font: normal 1em sans-serif;
+    font-size: $font-size;
     color: #333;
     scroll-behavior: smooth;
-}
-
-body {
-    font-size: $font-size;
     overflow-x: hidden;
 }
 
@@ -33,9 +30,15 @@ section {
     
     .title {
         text-transform: capitalize;
-        font: bold 2rem "Open Sans", sans-serif;
-        margin-bottom: 1.875rem;
+        font: bold 2em "Open Sans", sans-serif;
         text-align: center;
+        margin-bottom: 1.875rem;
+        transition: all 0.3s ease-in-out;
+        
+        &:hover {
+            color: $primary-color;
+        }
+    
     }
     
     p {
@@ -96,7 +99,6 @@ a {
 
 }
 
-
 // Main Header
 
 header {
@@ -113,7 +115,7 @@ header {
     
     h2 {
         font-family: "Quicksand", sans-serif;
-        font-size: 1.25rem;
+        font-size: 1.25em;
         text-shadow: $text-shadow;
         transition: all 0.3s ease-out;
         
@@ -128,7 +130,7 @@ header {
         list-style: none;
         
         a {
-            font-size: 1rem;
+            font-size: 1em;
             text-shadow: $text-shadow;
         }
         
@@ -167,13 +169,13 @@ header {
     }
     
     h1 {
-        font: bold 2.5rem "Open Sans", sans-serif;
+        font: bold 2.5em "Open Sans", sans-serif;
         text-shadow: $text-shadow;
         margin: 1rem 0;
     }
     
     h3 {
-        font: normal 1.25rem "Open Sans", sans-serif;
+        font: normal 1.25em "Open Sans", sans-serif;
         text-shadow: $text-shadow;
         margin-bottom: 2.5rem;
     }
@@ -217,6 +219,8 @@ header {
         
     }
     
+    // Fit link tag to image size (make entire image clickable)
+    
     a {
         display: block;
         width: 100%;
@@ -229,15 +233,6 @@ header {
 // Packages Section
 
 #packages {
-    
-    .title {
-        transition: all 0.3s ease-in-out;
-        
-        &:hover {
-            color: $primary-color;
-        }
-    
-    }
     
     .grid {
 
@@ -253,7 +248,7 @@ header {
         
         h4 {
             color: #333;
-            font-size: 1.875rem;
+            font-size: 1.875em;
             margin: 1.5625rem 0;
         }
         
@@ -270,7 +265,7 @@ header {
 #testimonials {
     
     .quote {
-        font-size: 1.375rem;
+        font-size: 1.375em;
         font-weight: 300;
         line-height: 1.5;
         margin: 2.5rem 0 1.5625rem;
@@ -299,7 +294,7 @@ header {
     input {
         padding: 1rem;
         margin-right: 2rem;
-        font-size: 1.125rem;
+        font-size: 1.125em;
         color: #555;
         flex: 1;
         border-radius: 2rem;
@@ -333,7 +328,7 @@ footer {
     
      p {
         text-transform: uppercase;
-        font-size: 0.875rem;
+        font-size: 0.875em;
         opacity: 0.6;
         align-self: center;
     }
@@ -396,12 +391,12 @@ footer {
     #testimonials {
         
         .quote {
-            font-size: 1.125rem;
+            font-size: 1.125em;
             margin: 1rem 0;
         }
         
         .author {
-            font-size: 0.875rem;
+            font-size: 0.875em;
         }
     
     }
@@ -428,11 +423,11 @@ footer {
         min-height: 37.5rem;
         
         h1 {
-            font-size: 3rem;
+            font-size: 3em;
         }
         
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.5em;
         }
         
         a.btn {
