@@ -10,7 +10,6 @@ $button-bg: radial-gradient(at bottom left, #228b22 50%, #2aab2a 100%);
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -126,6 +125,7 @@ header {
     
     nav ul {
         display: flex;
+        flex-direction: column;
         margin-right: -1rem;
         list-style: none;
         
@@ -136,6 +136,7 @@ header {
         
         li {
             margin: 0 1rem;
+            padding: 0.5rem 0;
             transition: all 0.3s ease-out;
             
             &:hover {
@@ -248,7 +249,7 @@ header {
         
         h4 {
             color: #333;
-            font-size: 1.875em;
+            font-size: 1.33em;
             margin: 1.5625rem 0;
         }
         
@@ -363,15 +364,11 @@ footer {
 
 // Media Queries
 
-@media (max-width: 40rem) {
+
+@media (min-width: 40rem) {
     
-    nav ul {
-        flex-direction: column;
-        
-        li {
-            padding: 0.5rem 0;
-        }
-        
+    header nav ul {
+        flex-direction: row;
     }
     
     #destinations .grid {
