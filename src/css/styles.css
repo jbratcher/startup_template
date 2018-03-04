@@ -70,7 +70,7 @@ header {
   position: absolute;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 2rem 6rem 0;
   animation: 1s fadein 0.5s forwards;
@@ -78,6 +78,7 @@ header {
   color: #fff;
   z-index: 1; }
   header h2 {
+    display: none;
     font-family: "Quicksand", sans-serif;
     font-size: 1.25em;
     text-shadow: 0 0 0.25rem black;
@@ -87,13 +88,11 @@ header {
   header nav ul {
     display: flex;
     flex-direction: column;
-    margin-right: -1rem;
     list-style: none; }
     header nav ul a {
       font-size: 1em;
       text-shadow: 0 0 0.25rem black; }
     header nav ul li {
-      margin: 0 1rem;
       padding: 0.5rem 0;
       transition: all 0.3s ease-out; }
       header nav ul li:hover {
@@ -130,29 +129,32 @@ header {
   margin-top: 4rem;
   animation: 1s slidefade 1s forwards; }
 
-#destinations .grid li {
-  height: 21.875rem;
-  padding: 1.25rem;
-  background-clip: content-box;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.875;
-  transition: all 0.5s ease-in-out; }
-  #destinations .grid li:hover {
-    opacity: 1; }
-  #destinations .grid li.small {
-    flex-basis: 30%; }
-  #destinations .grid li.large {
-    flex-basis: 70%; }
-
-#destinations .grid a {
-  display: block;
-  width: 100%;
-  height: 100%; }
+#destinations .grid {
+  flex-direction: column; }
+  #destinations .grid li {
+    height: 21.875rem;
+    padding: 1.25rem;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.875;
+    transition: all 0.5s ease-in-out; }
+    #destinations .grid li:hover {
+      opacity: 1; }
+    #destinations .grid li.small {
+      flex-basis: 30%; }
+    #destinations .grid li.large {
+      flex-basis: 70%; }
+  #destinations .grid li.small, #destinations .grid li.large {
+    flex-basis: 100%; }
+  #destinations .grid a {
+    display: block;
+    width: 100%;
+    height: 100%; }
 
 #packages .grid li {
-  padding: 3.125rem;
-  flex-basis: 50%;
+  padding: 1rem 0.5rem;
+  flex-basis: 100%;
   text-align: center; }
   #packages .grid li i {
     color: #2caa5e; }
@@ -229,12 +231,10 @@ footer {
       transform: scale(1.1); }
 
 @media (min-width: 40rem) {
+  header h2 {
+    display: flex; }
   header nav ul {
     flex-direction: row; }
-  #destinations .grid {
-    flex-direction: column; }
-    #destinations .grid li.small, #destinations .grid li.large {
-      flex-basis: 100%; }
   #packages .grid li {
     flex-basis: 100%;
     padding: 0.5rem; }
@@ -244,14 +244,15 @@ footer {
   #testimonials .author {
     font-size: 0.875em; } }
 
+@media (min-width: 40rem) and (max-width: 60rem) {
+  #destinations .grid {
+    flex-direction: row; }
+    #destinations .grid li.small, #destinations .grid li.large {
+      flex-basis: 50%; } }
+
 @media (max-width: 50rem) {
   section {
     padding: 3.125rem 1.25rem; }
-  header {
-    padding: 1.25rem 3.125rem;
-    flex-flow: column wrap; }
-    header h2 {
-      display: none; }
   .hero {
     min-height: 37.5rem; }
     .hero h1 {
@@ -267,9 +268,6 @@ footer {
     margin: 0 0 1.25rem 0; } }
 
 @media (max-width: 68.75rem) {
-  #destinations .grid li.small,
-  #destinations .grid li.large {
-    flex-basis: 50%; }
   footer {
     flex-direction: column; }
     footer footer p {

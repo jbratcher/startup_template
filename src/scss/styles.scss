@@ -104,7 +104,7 @@ header {
     position: absolute;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 2rem 6rem 0;
     animation: 1s fadein 0.5s forwards;
@@ -113,6 +113,7 @@ header {
     z-index: 1;
     
     h2 {
+        display: none;
         font-family: "Quicksand", sans-serif;
         font-size: 1.25em;
         text-shadow: $text-shadow;
@@ -126,7 +127,6 @@ header {
     nav ul {
         display: flex;
         flex-direction: column;
-        margin-right: -1rem;
         list-style: none;
         
         a {
@@ -135,7 +135,6 @@ header {
         }
         
         li {
-            margin: 0 1rem;
             padding: 0.5rem 0;
             transition: all 0.3s ease-out;
             
@@ -196,6 +195,8 @@ header {
 // Destinations Section
 
 #destinations .grid {
+    
+    flex-direction: column;
 
     li {
         height: 21.875rem;
@@ -220,6 +221,10 @@ header {
         
     }
     
+    li.small, li.large {
+        flex-basis: 100%;
+    }
+    
     // Fit link tag to image size (make entire image clickable)
     
     a {
@@ -238,8 +243,8 @@ header {
     .grid {
 
         li {
-            padding: 3.125rem;
-            flex-basis: 50%;
+            padding: 1rem 0.5rem;
+            flex-basis: 100%;
             text-align: center;
             
             i {
@@ -367,18 +372,17 @@ footer {
 
 @media (min-width: 40rem) {
     
-    header nav ul {
-        flex-direction: row;
-    }
-    
-    #destinations .grid {
-        flex-direction: column;
+    header {
         
-        li.small, li.large {
-            flex-basis: 100%;
+        h2 {
+            display: flex;
         }
-    
-    }
+        
+        nav ul {
+            flex-direction: row;
+        }
+        
+    } 
     
     #packages .grid li {
         flex-basis: 100%;
@@ -399,21 +403,24 @@ footer {
     }
     
 }
+    
+@media (min-width: 40rem) and (max-width: 60rem) {
+    
+    #destinations .grid {
+        flex-direction: row;
+        
+        li.small, li.large {
+            flex-basis: 50%;
+        }
+    
+    }
+    
+}
 
 @media (max-width: 50rem) {
     
     section {
         padding: 3.125rem 1.25rem;
-    }
-    
-    header {
-        padding: 1.25rem 3.125rem;
-        flex-flow: column wrap;
-        
-        h2 {
-            display: none;
-        }
-        
     }
     
     .hero {
@@ -445,11 +452,6 @@ footer {
 }
 
 @media (max-width: 68.75rem) {
-    
-    #destinations .grid li.small,
-    #destinations .grid li.large {
-        flex-basis: 50%;
-    }
     
     footer {
         flex-direction: column;
