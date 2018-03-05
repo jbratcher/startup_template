@@ -68,15 +68,15 @@ a {
 
 header {
   position: absolute;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 6rem 0;
-  animation: 1s fadein 0.5s forwards;
-  opacity: 0;
+  width: 100%;
   color: #fff;
-  z-index: 1; }
+  padding: 2rem 6rem 0;
+  opacity: 0;
+  z-index: 1;
+  animation: 1s fadein 0.5s forwards; }
   header h2 {
     display: none;
     font-family: "Quicksand", sans-serif;
@@ -90,7 +90,7 @@ header {
     flex-direction: column;
     list-style: none; }
     header nav ul a {
-      font-size: 1em;
+      font-size: 0.75em;
       text-shadow: 0 0 0.25rem black; }
     header nav ul li {
       padding: 0.5rem 0;
@@ -102,7 +102,7 @@ header {
   position: relative;
   justify-content: center;
   text-align: center;
-  min-height: 100vh;
+  min-height: 35rem;
   color: #fff; }
   .hero .background-image {
     position: absolute;
@@ -111,18 +111,18 @@ header {
     width: 100%;
     height: 100%;
     background-size: cover;
-    z-index: -1;
-    background-color: #80a3db; }
+    background-color: #80a3db;
+    z-index: -1; }
   .hero h1 {
-    font: bold 2.5em "Open Sans", sans-serif;
+    font: bold 2.25em "Open Sans", sans-serif;
     text-shadow: 0 0 0.25rem black;
-    margin: 1rem 0; }
+    margin: 2rem 0; }
   .hero h3 {
-    font: normal 1.25em "Open Sans", sans-serif;
+    font: normal 1em "Open Sans", sans-serif;
     text-shadow: 0 0 0.25rem black;
     margin-bottom: 2.5rem; }
   .hero a.btn {
-    padding: 1rem 2rem; }
+    padding: 1rem; }
 
 .hero-content {
   opacity: 0;
@@ -141,12 +141,8 @@ header {
     transition: all 0.5s ease-in-out; }
     #destinations .grid li:hover {
       opacity: 1; }
-    #destinations .grid li.small {
-      flex-basis: 30%; }
-    #destinations .grid li.large {
-      flex-basis: 70%; }
-  #destinations .grid li.small, #destinations .grid li.large {
-    flex-basis: 100%; }
+    #destinations .grid li.small, #destinations .grid li.large {
+      flex-basis: 100%; }
   #destinations .grid a {
     display: block;
     width: 100%;
@@ -168,7 +164,7 @@ header {
   color: #333; }
 
 #testimonials .quote {
-  font-size: 1.375em;
+  font-size: 1em;
   font-weight: 300;
   line-height: 1.5;
   margin: 2.5rem 0 1.5625rem; }
@@ -186,17 +182,16 @@ header {
     padding: 1.125rem 2.625rem;
     margin: 1.125rem 0; }
   #contact form input {
-    padding: 1rem;
-    margin-right: 2rem;
-    font-size: 1.125em;
     color: #555;
-    flex: 1;
+    font-size: 1.125em;
+    width: 50vw;
+    padding: 1rem;
     border-radius: 2rem; }
 
 footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   background-color: #389638;
   color: #fff;
   font-weight: 600;
@@ -208,20 +203,22 @@ footer {
       footer ul li .fa-long-arrow-up {
         padding-top: 1rem; }
   footer p {
-    text-transform: uppercase;
     font-size: 0.875em;
-    opacity: 0.6;
-    align-self: center; }
+    align-self: center;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.6; }
   footer i.fa-angle-up {
     position: relative;
-    top: 0.125rem;
+    top: 0.5rem;
     display: inline-block;
     transform: perspective(0.0625rem) translateZ(0);
     box-shadow: 0 0 0.0625rem transparent;
     color: #fff;
     animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
     transition: all 0.5s ease-in-out; }
-    footer i.fa-angle-up i.fa-angle-up:hover, footer i.fa-angle-up footer i.fa-angle-up:active, footer i.fa-angle-up footer i.fa-angle-up:focus {
+    footer i.fa-angle-up:hover, footer i.fa-angle-up:active, footer i.fa-angle-ups:focus {
       transform: scale(1.1); }
   footer a {
     opacity: 0.75;
@@ -230,19 +227,16 @@ footer {
       opacity: 1;
       transform: scale(1.1); }
 
-@media (min-width: 40rem) {
-  header h2 {
-    display: flex; }
-  header nav ul {
+@media (min-width: 60rem) {
+  #destinations .grid {
     flex-direction: row; }
-  #packages .grid li {
-    flex-basis: 100%;
-    padding: 0.5rem; }
-  #testimonials .quote {
-    font-size: 1.125em;
-    margin: 1rem 0; }
-  #testimonials .author {
-    font-size: 0.875em; } }
+    #destinations .grid li.small {
+      flex-basis: 30%; }
+    #destinations .grid li.large {
+      flex-basis: 70%; }
+  footer {
+    flex-direction: row;
+    justify-content: space-around; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   #destinations .grid {
@@ -250,33 +244,19 @@ footer {
     #destinations .grid li.small, #destinations .grid li.large {
       flex-basis: 50%; } }
 
-@media (max-width: 50rem) {
-  section {
-    padding: 3.125rem 1.25rem; }
+@media (min-width: 40rem) {
+  header {
+    justify-content: space-around; }
+    header h2 {
+      display: flex; }
+    header nav ul {
+      flex-direction: row; }
+      header nav ul li {
+        padding: 0 0.5rem; }
   .hero {
-    min-height: 37.5rem; }
-    .hero h1 {
-      font-size: 3em; }
-    .hero h3 {
-      font-size: 1.5em; }
-    .hero a.btn {
-      padding: 1rem 2.5rem; } }
-
-@media (max-width: 62.5rem) {
-  #contact form input {
-    flex-basis: 100%;
-    margin: 0 0 1.25rem 0; } }
-
-@media (max-width: 68.75rem) {
-  footer {
-    flex-direction: column; }
-    footer footer p {
-      text-align: center;
-      margin-bottom: 1.25rem; }
-    footer footer ul li {
-      margin: 0 0.5rem; }
-  i.fa-angle-up {
-    margin-top: 0.25rem; } }
+    min-height: 100vh; }
+  #packages .grid li {
+    flex-basis: 50%; } }
 
 @keyframes fadein {
   100% {
