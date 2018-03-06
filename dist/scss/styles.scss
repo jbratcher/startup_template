@@ -113,7 +113,7 @@ header {
     animation: 1s fadein 0.5s forwards;
     
     h2 {
-        display: none;
+        display: flex;
         font-family: "Quicksand", sans-serif;
         font-size: 1.25em;
         text-shadow: $text-shadow;
@@ -144,6 +144,35 @@ header {
         
         }
         
+    }
+    
+    #menu-toggle {
+        justify-self: end;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        
+        &:hover {
+            color: #aaa;
+            transition: all 0.3s ease-in-out;
+        }
+    
+    }
+    
+    #nav-mobile {
+        display: none;
+        
+        &:target {
+            display: flex;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        
+    }
+    
+    #nav-close {
+          justify-self: end;
     }
     
 }
@@ -400,11 +429,7 @@ footer {
 @media (min-width: 40rem) {
     
     header {
-        justify-content: space-around;
-        
-        h2 {
-            display: flex;
-        }
+        justify-content: space-between;
         
         nav ul {
             flex-direction: row;
@@ -413,6 +438,14 @@ footer {
                 padding: 0 0.5rem;
             }
             
+        }
+        
+        #menu-toggle, .toggle {
+            display: none;
+        }
+        
+        #nav-mobile {
+            display: flex;
         }
         
     }
