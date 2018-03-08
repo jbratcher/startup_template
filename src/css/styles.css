@@ -106,7 +106,8 @@ header {
         position: absolute;
         top: -0.125rem;
         right: 0.125rem;
-        font-size: 2em; }
+        font-size: 2em;
+        opacity: 0; }
   header #menu-toggle {
     justify-self: end;
     position: absolute;
