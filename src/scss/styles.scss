@@ -14,7 +14,7 @@ $button-bg: radial-gradient(at bottom left, #228b22 50%, #2aab2a 100%);
 }
 
 html, body {
-    font: normal 1em sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: $font-size;
     color: #333;
     scroll-behavior: smooth;
@@ -31,7 +31,7 @@ section {
         text-transform: capitalize;
         font: bold 2em "Open Sans", sans-serif;
         text-align: center;
-        margin-bottom: 1.875rem;
+        margin-bottom: 2rem;
         transition: all 0.3s ease-in-out;
         
         &:hover {
@@ -41,10 +41,10 @@ section {
     }
     
     p {
-        max-width: 48.4375rem;
+        max-width: 90vw;
         line-height: 2;
         padding: 0 1.25rem;
-        margin-bottom: 1.875rem;
+        margin-bottom: 2rem;
         text-align: center;
     }
     
@@ -59,8 +59,8 @@ ul {
 }
 
 hr {
-    width: 15.625rem;
-    height: 0.1875rem;
+    width: 15.625em;
+    height: 0.1875em;
     background-color: forestgreen;
     border: 0;
     margin-bottom: 3.125rem;
@@ -241,12 +241,12 @@ header {
     flex-direction: column;
 
     li {
-        height: 21.875rem;
+        height: 22rem;
         padding: 1.25rem;
         background-clip: content-box;
         background-size: cover;
         background-position: center;
-        opacity: 0.875;
+        opacity: 0.8;
         transition: all 0.5s ease-in-out ;
         
         &:hover {
@@ -289,7 +289,7 @@ header {
         h4 {
             color: #333;
             font-size: 1.33em;
-            margin: 1.5625rem 0;
+            margin: 1.5rem 0;
         }
         
         p {
@@ -308,7 +308,7 @@ header {
         font-size: 1em;
         font-weight: 300;
         line-height: 1.5;
-        margin: 2.5rem 0 1.5625rem;
+        margin: 2.5rem 0 1.5rem;
     }
     
     .author {
@@ -327,7 +327,7 @@ header {
     width: 60%;
     
     .btn {
-        padding: 1.125rem 2.625rem;
+        padding: 1rem 2.5rem;
         margin: 1.125rem 0;
     }
     
