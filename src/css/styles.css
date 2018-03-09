@@ -14,7 +14,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 4rem; }
+  padding: 6rem 1rem; }
   section .title {
     text-transform: capitalize;
     font: bold 2em "Open Sans", sans-serif;
@@ -210,7 +210,7 @@ header {
   #contact form input {
     color: #555;
     font-size: 1.125em;
-    width: 50vw;
+    width: 80vw;
     padding: 1rem;
     border-radius: 2rem; }
 
