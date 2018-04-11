@@ -61,7 +61,7 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  background: radial-gradient(at bottom left, #228b22 50%, #2aab2a 100%);
+  background: radial-gradient(at top right, #66b266 0%, #228b22 50%, #2aab2a 100%);
   transition: all 0.5s ease-in-out; }
   .btn:hover {
     top: -0.25rem; }
@@ -91,7 +91,7 @@ header {
     list-style: none; }
     header nav ul li {
       position: relative;
-      padding: 0.5rem 0;
+      padding: 1rem 0;
       transition: all 0.3s ease-out; }
       header nav ul li:nth-of-type(2) {
         margin-top: 1rem; }
@@ -100,13 +100,14 @@ header {
       header nav ul li:hover {
         transform: scale(1.3); }
       header nav ul li a {
-        font-size: 0.75em;
+        color: #fff;
+        font-size: 1.25em;
+        font-weight: bold;
         text-shadow: 0 0 0.25rem black; }
       header nav ul li #nav-close {
         position: absolute;
-        top: -0.125rem;
-        right: 0.125rem;
-        font-size: 2em;
+        top: 1rem;
+        right: 1rem;
         opacity: 0; }
   header #menu-toggle {
     justify-self: end;
@@ -121,8 +122,19 @@ header {
     header #nav-mobile:target {
       display: flex;
       position: absolute;
-      top: 1rem;
-      right: 1rem; }
+      top: 0;
+      left: 0; }
+      header #nav-mobile:target ul {
+        background: forestgreen;
+        background: radial-gradient(at top right, #66b266 0%, #228b22 50%, #2aab2a 100%);
+        align-items: center;
+        width: 100vw;
+        padding: 0 0 1rem; }
+        header #nav-mobile:target ul #nav-close {
+          position: relavtive;
+          top: 0.5rem;
+          right: -11rem;
+          opacity: 1; }
 
 .hero {
   position: relative;

@@ -3,7 +3,7 @@
 $font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 $text-shadow:  0 0 0.25rem rgba(0, 0, 0, 1);
 $primary-color: #2caa5e;
-$button-bg: radial-gradient(at bottom left, #228b22 50%, #2aab2a 100%);
+$button-bg: radial-gradient(at top right, #66b266 0%, #228b22 50%, #2aab2a 100%);
 
 // Global Styles
 
@@ -131,7 +131,7 @@ header {
         
         li {
             position: relative;
-            padding: 0.5rem 0;
+            padding: 1rem 0;
             transition: all 0.3s ease-out;
             
             &:nth-of-type(2) {
@@ -147,15 +147,16 @@ header {
             }
             
             a {
-                font-size: 0.75em;
+                color: #fff;
+                font-size: 1.25em;
+                font-weight: bold;
                 text-shadow: $text-shadow;
             }
             
             #nav-close {
                 position: absolute;
-                top: -0.125rem;
-                right: 0.125rem;
-                font-size: 2em;
+                top: 1rem;
+                right: 1rem;
                 opacity: 0;
             }
         
@@ -182,8 +183,24 @@ header {
         &:target {
             display: flex;
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: 0;
+            left: 0;
+            
+            ul {
+                background: forestgreen;
+                background: $button-bg;
+                align-items: center;
+                width: 100vw;
+                padding: 0 0 1rem;
+                
+                #nav-close {
+                    position: relavtive;
+                    top: 0.5rem;
+                    right: -11rem;
+                    opacity: 1;
+                }
+            }
+            
         }
         
     }
