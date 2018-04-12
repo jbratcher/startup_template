@@ -1,9 +1,10 @@
 // Variables
 
 $font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-$text-shadow:  0 0 0.25rem rgba(0, 0, 0, 1);
+$text-shadow:  0 0 0.5rem rgba(0, 0, 0, 1);
 $primary-color: #2caa5e;
-$button-bg: radial-gradient(at top right, #66b266 0%, #228b22 50%, #2aab2a 100%);
+$button-bg: radial-gradient(at top right, #66b266 0%, #228b22 30%, #2aab2a 100%);
+$menu-bg: radial-gradient(at top right, #66b266 0%, #228b22 50%, #2aab2a 100%);
 
 // Global Styles
 
@@ -32,7 +33,7 @@ section {
         font: bold 2em "Open Sans", sans-serif;
         text-align: center;
         margin-bottom: 2rem;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.5s ease-in-out;
         
         &:hover {
             color: $primary-color;
@@ -117,7 +118,7 @@ header {
         font-family: "Quicksand", sans-serif;
         font-size: 1.25em;
         text-shadow: $text-shadow;
-        transition: all 0.3s ease-out;
+        transition: all 0.5s ease-out;
         
         &:hover {
             transform: scale(1.1);
@@ -132,7 +133,7 @@ header {
         li {
             position: relative;
             padding: 1rem 0;
-            transition: all 0.3s ease-out;
+            transition: all 0.5s ease-out;
             
             &:nth-of-type(2) {
                 margin-top: 1rem;
@@ -172,7 +173,7 @@ header {
         
         &:hover {
             color: #aaa;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.5s ease-in-out;
         }
     
     }
@@ -188,7 +189,7 @@ header {
             
             ul {
                 background: forestgreen;
-                background: $button-bg;
+                background: $menu-bg;
                 align-items: center;
                 width: 100vw;
                 padding: 0 0 1rem;
@@ -408,7 +409,7 @@ footer {
     
     a {
         opacity: 0.75;
-        transition: all 0.3s ease-out;
+        transition: all 0.5s ease-out;
         
         &:hover {
             opacity: 1;
@@ -430,10 +431,14 @@ footer {
             flex-direction: row;
             
             li {
-                padding: 0 0.5rem;
+                padding: 0 0.75rem;
                 
                 &:nth-of-type(2) {
                     margin-top: 0;
+                }
+                
+                a {
+                    font-size: 1em;
                 }
             }
             
@@ -485,6 +490,10 @@ footer {
             flex-basis: 70%;
         }
         
+    }
+    
+    #contact form input {
+        width: 40vw;
     }
     
     footer {

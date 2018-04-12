@@ -1,6 +1,6 @@
 # Startup
 
-v.1.0.2
+v.1.0.3
 
 Startup is a Vanilla HTML5/CSS3 Website Template for a Startup Company.
 
@@ -18,6 +18,10 @@ This is a experimental project using only HTML and CSS to create a modern web ap
 <a href="https://jbratcher.github.io/startup_template/" target="_blank">Demo Page</a>
 
 # Change Log
+
+v1.0.3
+
+* Added full-width dropdown mobile menu
 
 v1.0.2
 
